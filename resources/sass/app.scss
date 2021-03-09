@@ -1,0 +1,453 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// fontawesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+// datatables
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.css';
+
+// bootstrap-multiselect
+@import "~bootstrap-multiselect/dist/css/bootstrap-multiselect";
+
+// bs
+.card {
+    border-radius: 0 !important;
+}
+
+.custom-control-label {
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+    [role=main] {
+        padding-bottom: 48px;
+    }
+}
+
+.page-item.active .page-link {
+    background-color: $secondary !important;
+    border: 1px solid $secondary;
+    color: #fff !important;
+}
+.page-link {
+    color: $text-color !important;
+}
+
+.badge {
+    min-width: 30px;
+}
+
+table td {
+    vertical-align: middle !important;
+}
+
+.card-body .table tr:first-child td {
+    border-top: 0;
+}
+.card-body .table tr td:first-child,
+.card-body .table tr th:first-child {
+    padding-left: 1.25rem;
+}
+.card-body .table tr td:last-child,
+.card-body .table tr th:last-child {
+    padding-right: 1.25rem;
+}
+.card-body .table tr th {
+    color: #999;
+}
+
+.alert-orange {
+    background-color: lighten($orange, 10%);
+    color:#fff;
+}
+// bs
+
+body {
+    font-size: .875rem;
+}
+
+/*
+* Sidebar
+*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100% - 40px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .fas,
+.sidebar .nav-link .far,
+.sidebar .nav-link .fab {
+    margin-right: 4px;
+    color: #999;
+    text-align: center;
+    width: 1.25em;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .fas,
+.sidebar .nav-link.active .fas,
+.sidebar .nav-link:hover .far,
+.sidebar .nav-link.active .far,
+.sidebar .nav-link:hover .fab,
+.sidebar .nav-link.active .fab, {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.sidebar .nav-item + ul {
+    padding-left: 1.5rem;
+}
+.sidebar .nav-item + ul .nav-item {
+    list-style: none;
+}
+.sidebar .nav-item + ul .nav-link {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.dropdown-menu .dropdown-item .fas,
+.dropdown-menu .dropdown-item .far {
+    color: #999;
+    text-align: center;
+    width: 1.25em;
+}
+
+.logo {
+
+}
+
+/*
+* Content
+*/
+
+[role="main"] {
+    padding-top: 133px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+    [role="main"] {
+        padding-top: 48px; /* Space for fixed navbar */
+    }
+}
+
+/*
+* Navbar
+*/
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+#alert {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 365px;
+    max-width: 380px;
+}
+
+.form-group.required label:not(.custom-control-label):not(.w-100):after {
+    font-size: 12px !important;
+    content: "*";
+    color: red;
+    opacity: 1 !important;
+    position: absolute;
+    // top: 0px;
+    margin-left: 3px;
+    display: inline;
+}
+
+// btn actions colors
+.icon-info {
+    color: $secondary !important;
+    cursor:pointer;
+}
+.icon-info:hover {
+    color: $info !important;
+}
+.icon-edit {
+    color: $secondary !important;
+    cursor:pointer;
+}
+.icon-delete {
+    color: $secondary !important;
+    cursor:pointer;
+}
+.icon-edit:hover {
+    color: $orange !important;
+}
+.icon-delete:hover {
+    color: $red !important;
+}
+.icon-read {
+    color: $secondary !important;
+    cursor:pointer;
+}
+.icon-read:hover {
+    color: $primary !important;
+}
+
+.multiselect-clear-filter {
+    border: 1px solid #ced4da !important;
+}
+.multiselect-container .dropdown-item input {
+    visibility: hidden;
+}
+.multiselect-container li.active:not(.multiselect-item) {
+    background-color: $primary !important;
+    color: #fff;
+}
+.multiselect-container li.active:hover,
+.multiselect-container li.active:hover .dropdown-item {
+    background-color: $info !important;
+}
+
+.profile_dropdown {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.profile_dropdown .avatar {
+    color: #999;
+    font-size: 2.3rem;
+}
+
+
+// tab-card
+.tab-card {
+    border:1px solid #eee;
+}
+
+.tab-card-header {
+    background:none;
+}
+/* Default mode */
+.tab-card-header > .nav-tabs {
+    border: none;
+    margin: 0px;
+}
+.tab-card-header > .nav-tabs > li {
+    margin-right: 2px;
+}
+.tab-card-header > .nav-tabs > li > a {
+    border: 0;
+    border-bottom:2px solid transparent;
+    margin-right: 0;
+    color: #737373;
+    padding: 2px 15px;
+}
+
+.tab-card-header > .nav-tabs > li > .active {
+    border-bottom:2px solid $primary;
+    color: $primary;
+}
+.tab-card-header > .nav-tabs > li > a:hover {
+    color: $primary;
+}
+
+.tab-card-header > .tab-content {
+    padding-bottom: 0;
+}
+
+
+.text-created {
+    color: $success;
+}
+.text-updated {
+    color: $orange;
+}
+.text-deleted {
+    color: $danger;
+}
+
+.logo,
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-orange {
+    color: $orange;
+}
+.badge-orange {
+    background-color: $orange;
+    color: #fff;
+}
+.badge-pill {
+    min-width: unset !important;
+}
+
+.sidebar_bottom {
+    font-size: 80%;
+    color: #999;
+    padding: 0.5rem 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sidebar_bottom a {
+    color: #999;
+}
+
+// dashboard
+.wrapper {
+    position: relative;
+}
+.heading {
+    margin: 25px 0;
+    font-size: 24px;
+}
+.dashboard-stat {
+    position: relative;
+    display: block;
+    margin: 0 0 25px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.dashboard-stat .visual {
+    width: 80px;
+    height: 120px;
+    display: block;
+    float: left;
+    padding-top: 40px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-size: 35px;
+    line-height: 35px;
+}
+.dashboard-stat .visual > i {
+    margin-left: -15px;
+    font-size: 110px;
+    line-height: 110px;
+    color: #fff;
+    opacity: 0.5;
+}
+.dashboard-stat .details {
+    position: absolute;
+    right: 15px;
+    padding-right: 15px;
+    color: #fff;
+    width: 100%;
+}
+.dashboard-stat .details .number {
+    padding-top: 25px;
+    text-align: right;
+    font-size: 34px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+.dashboard-stat .details .desc {
+    text-transform: capitalize;
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 300;
+}
+.dashboard-stat .details .progress {
+    margin-top: 10px;
+    width: calc(100% - 150px);
+    float: right;
+}
+.dashboard-stat.primary {
+    background-color: $primary;
+}
+.dashboard-stat.danger {
+    background-color: $danger;
+}
+.dashboard-stat.warning {
+    background-color: $orange;
+}
+.dashboard-stat.success {
+    background-color: $success;
+}
+.dashboard-stat.primary .progress-bar {
+    background-color: lighten($primary, 15%) !important;
+}
+.dashboard-stat.danger .progress-bar {
+    background-color: lighten($danger, 15%) !important;
+}
+.dashboard-stat.warning .progress-bar {
+    background-color: lighten($orange, 15%) !important;
+}
+.dashboard-stat.success .progress-bar {
+    background-color: lighten($success, 15%) !important;
+}
+
+// .home .card .card-header {
+//     font-weight: bold;
+//     color: $secondary;
+//     line-height: 28px;
+// }
+
+.clickable {
+    cursor: pointer;
+}
